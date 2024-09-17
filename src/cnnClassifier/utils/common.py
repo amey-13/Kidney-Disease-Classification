@@ -9,11 +9,13 @@ from ensure import ensure_annotations
 from pathlib import Path
 from typing import Any
 import base64
+import mlflow
 
 
 @ensure_annotations
 def read_yaml(path_to_yaml: Path) -> ConfigBox:
-    """Reads yaml file and returns
+    """
+    Reads yaml file and returns
 
     Args:
         path_to_yaml (str): path like input
@@ -39,7 +41,8 @@ def read_yaml(path_to_yaml: Path) -> ConfigBox:
 
 @ensure_annotations
 def create_directories(path_to_directories: list, verbose=True):
-    """Create list of directories
+    """
+    Create list of directories
 
     Args:
         path_to_directories (list): list of path of directories
@@ -53,7 +56,8 @@ def create_directories(path_to_directories: list, verbose=True):
 
 @ensure_annotations
 def save_json(path: Path, data: dict):
-    """Save json data
+    """
+    Save json data
 
     Args:
         path (Path): path to json file
@@ -69,7 +73,8 @@ def save_json(path: Path, data: dict):
 
 @ensure_annotations
 def load_json(path: Path) -> ConfigBox:
-    """Load json files data
+    """
+    Load json files data
 
     Args:
         path (Path): path to json file
@@ -86,7 +91,8 @@ def load_json(path: Path) -> ConfigBox:
 
 @ensure_annotations
 def save_bin(data: Any, path: Path):
-    """Save binary file
+    """
+    Save binary file
 
     Args:
         data (Any): data to be saved as binary
@@ -98,7 +104,8 @@ def save_bin(data: Any, path: Path):
 
 @ensure_annotations
 def load_bin(path: Path) -> Any:
-    """Load binary data
+    """
+    Load binary data
 
     Args:
         path (Path): path to binary file
@@ -112,7 +119,8 @@ def load_bin(path: Path) -> Any:
 
 @ensure_annotations
 def get_size(path: Path) -> str:
-    """Get size in KB
+    """
+    Get size in KB
 
     Args:
         path (Path): path of the file
